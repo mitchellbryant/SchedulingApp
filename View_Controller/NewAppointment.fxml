@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="404.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.NewAppointmentController">
+   <children>
+      <Label layoutX="12.0" layoutY="14.0" prefHeight="40.0" prefWidth="198.0" text="New Appointment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePickerAppt" layoutX="160.0" layoutY="75.0" prefWidth="174.0" showWeekNumbers="true" />
+      <Button layoutX="496.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleCancelButton" prefHeight="46.0" prefWidth="158.0" text="Cancel" />
+      <Label layoutX="20.0" layoutY="75.0" prefHeight="25.0" prefWidth="106.0" text="Choose Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="131.0" layoutY="344.0" mnemonicParsing="false" onAction="#addAppt" prefHeight="46.0" prefWidth="158.0" text="Save" />
+      <Label layoutX="20.0" layoutY="164.0" prefHeight="25.0" prefWidth="140.0" text="Appointment Name:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apptName" layoutX="160.0" layoutY="164.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="217.0" prefHeight="25.0" prefWidth="113.0" text="Description:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="112.0" prefHeight="25.0" prefWidth="106.0" text="Choose Time:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="116.0" text=":" />
+      <Label layoutX="376.0" layoutY="75.0" prefHeight="25.0" prefWidth="120.0" text="Choose Customer:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerTableAppt" layoutX="376.0" layoutY="100.0" prefHeight="233.0" prefWidth="296.0">
+         <columns>
+            <TableColumn fx:id="customerName" prefWidth="161.0" text="Name" />
+            <TableColumn fx:id="customerPhone" prefWidth="138.0" text="Phone #" />
+            <TableColumn fx:id="customerAddress" prefWidth="171.0" text="Address" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="startHour" layoutX="131.0" layoutY="112.0" prefHeight="25.0" prefWidth="45.0" />
+      <ChoiceBox fx:id="startMin" layoutX="186.0" layoutY="112.0" prefHeight="25.0" prefWidth="45.0" />
+      <Label layoutX="240.0" layoutY="116.0" prefWidth="14.0" text="to" />
+      <Label layoutX="308.0" layoutY="116.0" text=":" />
+      <ChoiceBox fx:id="endHour" layoutX="259.0" layoutY="112.0" prefHeight="25.0" prefWidth="45.0" />
+      <ChoiceBox fx:id="endMin" layoutX="314.0" layoutY="112.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="apptDescription" layoutX="127.0" layoutY="217.0" prefHeight="25.0" prefWidth="231.0" />
+   </children>
+</AnchorPane>

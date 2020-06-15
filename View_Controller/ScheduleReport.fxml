@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ScheduleReportController">
+   <children>
+      <TableView fx:id="myAppointmentTable" layoutX="37.0" layoutY="57.0" prefHeight="250.0" prefWidth="526.0">
+         <columns>
+            <TableColumn fx:id="apptName" prefWidth="125.0" text="Appointment Name" />
+            <TableColumn fx:id="customerName" prefWidth="114.0" text="Customer" />
+            <TableColumn fx:id="apptStart" prefWidth="137.0" text="Start" />
+            <TableColumn fx:id="apptEnd" prefWidth="149.0" text="End" />
+         </columns>
+      </TableView>
+      <Button fx:id="exitButton" layoutX="422.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleCancelButton" prefHeight="46.0" prefWidth="128.0" text="Exit" />
+      <Label layoutX="37.0" layoutY="14.0" text="My Schedule">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
